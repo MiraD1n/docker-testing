@@ -31,6 +31,18 @@ services:
       - MYSQL_ROOT_PASSWORD=docker
     ports:
       - "3306:3306"
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: docker
+    depends_on:
+      - mysql
+    networks:
+    - AMP
+    ports:
+    - "8080:80"
   # nginx:
   #   image: nginx:stable-alpine
   #   build: './.setup/nginx/'
