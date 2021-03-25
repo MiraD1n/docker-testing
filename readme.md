@@ -13,6 +13,7 @@ This test environment contains the following separate containers working togethe
 - httpd:2.4-alpine
 - mysql:5.6
 
+
 There is also an nginx section commented out in the docker-compose file that can be interchanged with apache.
 
 For more info please see `docker-compose.yml`
